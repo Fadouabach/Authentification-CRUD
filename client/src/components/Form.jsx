@@ -70,15 +70,7 @@ function Form() {
       </div>
 
       
-      <div>
-        <label>password:</label>
-        <input
-          type="text"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-        />
-      </div>
+      
 
       <button type="submit">Create</button>
     </form>
