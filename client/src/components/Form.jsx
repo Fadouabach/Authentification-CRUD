@@ -11,19 +11,28 @@ function Form() {
     birthdate: "",
     email: "",
     password: "",
-  })
+  });
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    })
-  }
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(formData)
-  }
+    console.log(formData);
+
+    setFormData({
+      firstname:"",
+      lastname:"",
+      birthdate:"",
+      email:"",
+      password:"",
+
+    });
+  };
 
   return (
     <form onSubmit={handleSubmit}>
