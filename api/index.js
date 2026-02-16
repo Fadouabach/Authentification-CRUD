@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/',(req,res)=>{
-    res.send('users')
+    res.json('users')
 })
 
 app.post('/register', (req, res) => {
@@ -20,7 +20,8 @@ app.post('/register', (req, res) => {
     birthdate,
     password
   }
-  users.push(newUser)
+  users.push(newUser);
+
   res.json(newUser)
 
 })
@@ -32,6 +33,6 @@ app.post('/register', (req, res) => {
 
 
 
-// app.listen(5000, () => {
-//   console.log("Server running on port 5000")
-// })
+app.listen(5000, () => {
+  console.log("Server running on port 5000")
+})

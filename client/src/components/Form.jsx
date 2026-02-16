@@ -22,7 +22,7 @@ function Form() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(formData);
+    
 
     setFormData({
       firstname:"",
