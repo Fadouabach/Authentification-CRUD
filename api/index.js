@@ -7,9 +7,13 @@ const users = require("./data/users");
 app.use(cors());
 app.use(express.json());
 
-app.get('/',(req,res)=>{
-    res.json('users')
-})
+
+
+
+app.get('/users',(req,res)=>{
+    res.json(users)
+});
+
 
 app.post('/register', (req, res) => {
   const { firstname, lastname, birthdate,email, password } = req.body
